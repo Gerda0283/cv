@@ -1,0 +1,125 @@
+
+.part__introduce, .part__division {
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+
+    width: 500px;
+  }
+
+  @media (max-width: $sm-desktop-width-only) {
+
+    align-self: flex-start;
+  }
+
+  @media (min-width: $sm-desktop-width) {
+
+    justify-content: flex-end;
+  }
+}
+
+.part__projects {
+
+  @media (min-width: $tablet-width) {
+
+  }
+}
+
+.part--inner {
+
+  display: grid;
+  grid-template-rows: 50px auto 50px;
+
+  @media (min-width: $tablet-width) {
+
+    grid-template-rows: 100px auto 50px;
+  }
+}
+
+.part--about {
+
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: $basic-white;
+
+  @media (min-width: $portrait-width) {
+
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $sm-tablet-width) {
+
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: $sm-desktop-width-only) {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  @media (min-width: $sm-desktop-width) {
+
+    width: 580px;
+    padding: 50px 40px 50px 40px;
+  }
+
+  @media (min-width: $sm-desktop-width) {
+
+    width: 600px;
+  }
+}
+
+.part--bio {
+
+  display: flex;
+  flex-direction: column;
+  color: $basic-white;
+  background-color: $basic-mint;
+
+  @media (min-width: $portrait-width) and (max-width: $sm-desktop-width-only) {
+
+    flex-direction: row;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+
+  @media (min-width: $sm-desktop-width) {
+
+    width: 400px;
+    padding: 40px 0 100px 0;
+    background-image: linear-gradient($basic-white 9%, $basic-mint 9%, $basic-mint 100%);
+  }
+
+  @media (min-width: $desktop-width) {
+
+    width: 370px;
+  }
+}
+
+.part__info {
+
+  width: 240px;
+  padding-left: 40px;
+  order: 4;
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+  }
+
+  @media (min-width: $sm-desktop-width) and (max-width: $desktop-width-only) {
+    padding-left: 30px;
+    width: 220px;
+  }
+
+  &:last-child {
+
+    padding-bottom: 40px;
+  }
+}

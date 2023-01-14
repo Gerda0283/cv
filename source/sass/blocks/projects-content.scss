@@ -1,0 +1,15 @@
+
+.projects-content__item {
+
+  b {
+
+    color: $special-extra_light_mint;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    font-size: 22px;
+    line-height: 27px;
+  }
+}

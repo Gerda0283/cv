@@ -1,0 +1,19 @@
+.department {
+
+  @media (min-width: $tablet-width) {
+    width: 600px;
+  }
+}
+
+.department__cell {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.department__date {
+
+  margin-top: 15px;
+  color: $basic-light_grey;
+  font-size: 13px;
+  line-height: 18px;
+}

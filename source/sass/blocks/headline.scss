@@ -1,0 +1,116 @@
+.headline {
+
+  color: $basic-black;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+.headline--main {
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+  order: 2;
+
+  @media (min-width: $desktop-width) {
+
+    font-size: 45px;
+    line-height: 55px;
+  }
+}
+
+.headline--second {
+
+  margin-bottom: 10px;
+  order: 1;
+
+  b {
+
+    color: $basic-mint;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.headline--third {
+
+  @media (min-width: $desktop-width) {
+
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+
+.headline--forth {
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  b {
+
+    color: $basic-mint;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.headline-fifth {
+
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 1em;
+
+  @media (min-width: $desktop-width) {
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.headline--bio {
+
+  color: $basic-white;
+  column-span: all;
+
+  &:first-of-type {
+
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    font-size: 22px;
+    line-height: 27px;
+
+    &:first-of-type {
+
+      margin-top: 25px;
+    }
+  }
+}
+
+.headline--inner {
+
+  margin-top: 20px;
+}
+
+.headline--descript {
+
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 5px;
+
+  b {
+
+    text-transform: none;
+  }
+}
