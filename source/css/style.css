@@ -452,6 +452,11 @@ ul {
   display: block;
   margin-bottom: 14px;
 }
+.department__cell b {
+  color: #000000;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
 
 .department__date {
   margin-top: 15px;
@@ -584,9 +589,6 @@ ul {
 .contact-list__link:active {
   color: #FFFFFF;
   opacity: 50%;
-}
-.contact-list__link:visited {
-  color: #A8A8A8;
 }
 
 .description-list {

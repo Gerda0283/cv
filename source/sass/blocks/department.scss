@@ -8,6 +8,12 @@
 .department__cell {
   display: block;
   margin-bottom: 14px;
+
+  b {
+    color: $basic-black;
+    font-family: "Montserrat";
+    font-weight: 700;
+  }
 }
 
 .department__date {

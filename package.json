@@ -1,7 +1,8 @@
+
 {
-  "name": "cat-energy-23",
+  "name": "cv",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "Daria Germash CV",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.2.5",
@@ -37,6 +38,6 @@
     "source/sass/**/*.scss"
   ],
   "engines": {
-    "node": "^12 || ^14"
+    "node": "^12 || ^14 || ^16"
   }
 }
