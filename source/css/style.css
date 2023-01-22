@@ -244,7 +244,7 @@ img {
 
 p {
   margin: 0;
-  order: 2;
+  text-indent: 1.75em;
 }
 
 a {
@@ -474,7 +474,6 @@ ul {
 .headline--main {
   margin-top: 10px;
   margin-bottom: 20px;
-  order: 2;
 }
 @media (min-width: 1200px) {
   .headline--main {
@@ -485,7 +484,6 @@ ul {
 
 .headline--second {
   margin-bottom: 10px;
-  order: 1;
 }
 .headline--second b {
   color: #79a8b0;
