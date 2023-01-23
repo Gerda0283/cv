@@ -305,11 +305,6 @@ ul {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 768px) {
-  .part__introduce, .part__division {
-    width: 500px;
-  }
-}
 @media (max-width: 992px) {
   .part__introduce, .part__division {
     align-self: flex-start;
@@ -465,35 +460,36 @@ ul {
   line-height: 18px;
 }
 
+.department--noindent p {
+  text-indent: 0;
+}
+
 .headline {
   color: #000000;
   font-family: "Montserrat";
   font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .headline--main {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  font-size: 24px;
 }
 @media (min-width: 1200px) {
   .headline--main {
-    font-size: 45px;
+    font-size: 40px;
     line-height: 55px;
   }
 }
 
 .headline--second {
+  font-size: 16px;
+  line-height: 20px;
   margin-bottom: 10px;
 }
 .headline--second b {
   color: #79a8b0;
   text-transform: uppercase;
-}
-@media (min-width: 1200px) {
-  .headline--second {
-    font-size: 16px;
-    line-height: 20px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -559,6 +555,16 @@ ul {
 }
 .headline--descript b {
   text-transform: none;
+}
+
+.headline--job-type {
+  font-family: "E-Ukraine", sans-serif;
+  margin-bottom: 15px;
+  color: #A8A8A8;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .contact-list {
@@ -919,5 +925,9 @@ ul {
   .part__text {
     padding: 0 25px;
   }
+}
+
+.languages--noindent p {
+  text-indent: 0;
 }
 /*# sourceMappingURL=style.css.map */

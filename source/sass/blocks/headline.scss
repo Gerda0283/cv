@@ -1,36 +1,35 @@
+
 .headline {
 
   color: $basic-black;
   font-family: "Montserrat";
   font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+
 
 .headline--main {
 
-  margin-top: 10px;
-  margin-bottom: 20px;
+  font-size: 24px;
 
   @media (min-width: $desktop-width) {
 
-    font-size: 45px;
+    font-size: 40px;
     line-height: 55px;
   }
 }
 
 .headline--second {
 
+  font-size: 16px;
+  line-height: 20px;
   margin-bottom: 10px;
 
   b {
 
     color: $basic-mint;
     text-transform: uppercase;
-  }
-
-  @media (min-width: $desktop-width) {
-
-    font-size: 16px;
-    line-height: 20px;
   }
 }
 
@@ -111,4 +110,15 @@
 
     text-transform: none;
   }
+}
+
+.headline--job-type {
+
+  font-family: "E-Ukraine", sans-serif;
+  margin-bottom: 15px;
+  color: $basic-light_grey;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
