@@ -42,7 +42,20 @@
   display: block;
   margin-bottom: 1.43rem;
   overflow: hidden;
+  filter: grayscale(100%);
+  transition: all 0.5s;
 
+  &:hover, &:focus {
+
+    filter: grayscale(0);
+    opacity: 1;
+  }
+
+}
+
+.figure__item:hover .figure__image {
+
+  filter: grayscale(0);
 }
 
 .figure__image:hover img {
@@ -69,6 +82,11 @@
   box-sizing: border-box;
 }
 
+.figure__caption >:not(:last-child) {
+
+  margin-bottom: 0.7143rem;
+}
+
 .figure__date {
 
   color: $basic-black;
@@ -81,6 +99,7 @@
 
   color: $basic-mint;
   font-size: 1.2rem;
+  line-height: 1.4;
 }
 
 .figure__text {

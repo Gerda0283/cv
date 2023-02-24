@@ -2,7 +2,7 @@
 .headline {
 
   color: $basic-black;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -101,7 +101,7 @@
       left: 0;
       width: calc(100%/3.7);
       height: 30px;
-      background-color: $basic-mint;
+      background-color: $special-extra_light_mint;
       z-index: -1;
     }
 
@@ -155,7 +155,7 @@
       left: 0;
       width: calc(100%/3.7);
       height: 30px;
-      background-color: $basic-mint;
+      background-color: $special-extra_light_mint;
       z-index: -1;
     }
 

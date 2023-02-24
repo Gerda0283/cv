@@ -260,25 +260,22 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 0;
-  text-indent: 1.75em;
+  text-indent: 1.5rem;
 }
 
 a {
-  color: #79a8b0;
+  color: #36a8a3;
   text-decoration: none;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-a:hover {
-  color: #1aa985;
-}
-a:focus {
-  color: #1aa985;
-  opacity: 100%;
+a:hover, a:focus {
+  color: #68a4a1;
+  opacity: 0.75;
 }
 a:active {
-  color: #1aa985;
-  opacity: 50%;
+  color: #68a4a1;
+  opacity: 0.5;
 }
 
 button {
@@ -300,7 +297,7 @@ em {
 
 .page__body {
   display: block;
-  color: #595959;
+  color: #47515a;
   font-family: "E-Ukraine", sans-serif;
   font-size: 14px;
   line-height: 1.7;
@@ -373,8 +370,8 @@ em {
   display: flex;
   flex-direction: column;
   color: #FFFFFF;
-  background-color: #79a8b0;
   padding-top: 2.86rem;
+  background-color: #68a4a1;
 }
 @media (min-width: 370px) and (max-width: 992px) {
   .part--bio {
@@ -390,7 +387,7 @@ em {
     flex-grow: 0;
     flex-shrink: 1;
     padding: 40px 0 100px 0;
-    background-image: linear-gradient(#FFFFFF 9%, #79a8b0 9%, #79a8b0 100%);
+    background: #36a8a3 linear-gradient(#FFFFFF 9%, #68a4a1 9%, #0f6a80 100%);
   }
 }
 
@@ -399,6 +396,7 @@ em {
     width: 100%;
     padding: 20px 0 0 0;
     background-image: none;
+    background-color: #68a4a1;
   }
 }
 .part--bio.part--inner-footer .part__picture {
@@ -524,7 +522,7 @@ em {
 
 .department__date {
   margin-top: 15px;
-  color: #A8A8A8;
+  color: #8E9BAB;
   font-size: 13px;
   line-height: 18px;
 }
@@ -535,7 +533,7 @@ em {
 
 .headline {
   color: #000000;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -563,7 +561,7 @@ em {
   margin-bottom: 10px;
 }
 .headline--second b {
-  color: #79a8b0;
+  color: #36a8a3;
   text-transform: uppercase;
 }
 
@@ -579,7 +577,7 @@ em {
   margin-bottom: 0;
 }
 .headline--forth b {
-  color: #79a8b0;
+  color: #36a8a3;
   text-transform: uppercase;
 }
 @media (min-width: 1200px) {
@@ -620,7 +618,7 @@ em {
     left: 0;
     width: calc(100%/3.7);
     height: 30px;
-    background-color: #79a8b0;
+    background-color: #68a4a1;
     z-index: -1;
   }
   .headline--bio::after {
@@ -631,7 +629,7 @@ em {
     right: 0;
     height: 1px;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(120, 167, 176, 0.541) 10%, #9cebd5 100%);
+    background-image: linear-gradient(to right, rgba(54, 168, 163, 0.541) 10%, #9cebd5 100%);
     background-size: left top/100%;
     background-repeat: no-repeat;
     z-index: -2;
@@ -660,7 +658,7 @@ em {
     left: 0;
     width: calc(100%/3.7);
     height: 30px;
-    background-color: #79a8b0;
+    background-color: #68a4a1;
     z-index: -1;
   }
   .part--inner-headline::after {
@@ -671,7 +669,7 @@ em {
     right: 0;
     height: 1px;
     width: 100%;
-    background-image: linear-gradient(to right, rgba(120, 167, 176, 0.541) 10%, #9cebd5 100%);
+    background-image: linear-gradient(to right, rgba(54, 168, 163, 0.541) 10%, #9cebd5 100%);
     background-size: left top/100%;
     background-repeat: no-repeat;
     z-index: -2;
@@ -683,7 +681,7 @@ em {
 }
 
 .headline--inner b {
-  color: #79a8b0;
+  color: #36a8a3;
   text-transform: uppercase;
 }
 @media (min-width: 1200px) {
@@ -700,7 +698,7 @@ em {
 .headline--job-type {
   font-family: "E-Ukraine", sans-serif;
   margin-bottom: 15px;
-  color: #A8A8A8;
+  color: #8E9BAB;
   font-size: 13px;
   line-height: 18px;
   font-weight: 300;
@@ -754,7 +752,7 @@ em {
   height: 4px;
   width: 4px;
   border-radius: 50%;
-  background-color: #595959;
+  background-color: #47515a;
 }
 
 .part-list {
@@ -1074,6 +1072,16 @@ em {
   display: block;
   margin-bottom: 1.43rem;
   overflow: hidden;
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
+.figure__image:hover, .figure__image:focus {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.figure__item:hover .figure__image {
+  filter: grayscale(0);
 }
 
 .figure__image:hover img {
@@ -1097,6 +1105,10 @@ em {
   box-sizing: border-box;
 }
 
+.figure__caption > :not(:last-child) {
+  margin-bottom: 0.7143rem;
+}
+
 .figure__date {
   color: #000000;
   font-size: 0.9rem;
@@ -1105,8 +1117,9 @@ em {
 }
 
 .figure__title {
-  color: #79a8b0;
+  color: #36a8a3;
   font-size: 1.2rem;
+  line-height: 1.4;
 }
 
 .figure__text p {
@@ -1128,7 +1141,7 @@ em {
   flex-direction: column;
   align-items: center;
   padding: 10px 25px;
-  color: #595959;
+  color: #47515a;
   background-color: #FFFFFF;
   font-size: 0.86rem;
   letter-spacing: 1px;

@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin: 0;
-  text-indent: 1.75em;
+  text-indent: 1.5rem;
 }
 
 a {
@@ -43,21 +43,16 @@ a {
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 
-  &:hover {
+  &:hover, &:focus {
 
-    color: $special-mint;
-  }
-
-  &:focus {
-
-    color: $special-mint;
-    opacity: 100%;
+    color: $special-extra_light_mint;
+    opacity: 0.75;
   }
 
   &:active {
 
-    color: $special-mint;
-    opacity: 50%;
+    color: $special-extra_light_mint;
+    opacity: 0.5;
   }
 }
 

@@ -48,8 +48,8 @@
   display: flex;
   flex-direction: column;
   color: $basic-white;
-  background-color: $basic-mint;
   padding-top: 2.86rem;
+  background-color: $special-extra_light_mint;
 
   @media (min-width: $portrait-width) and (max-width: $sm-desktop-width-only) {
 
@@ -65,7 +65,7 @@
     flex-grow: 0;
     flex-shrink: 1;
     padding: 40px 0 100px 0;
-    background-image: linear-gradient($basic-white 9%, $basic-mint 9%, $basic-mint 100%);
+    background: $basic-mint linear-gradient($basic-white 9%, $special-extra_light_mint 9%, $special-teal 100%);
   }
 
 }
@@ -77,6 +77,7 @@
     width: 100%;
     padding: 20px 0 0 0;
     background-image: none;
+    background-color: $special-extra_light_mint;
   }
 
   .part__picture {
