@@ -1,20 +1,11 @@
 .portrait {
 
-  @media (min-width: $mobile-width) and (max-width: $sm-desktop-width-only) {
-
-    justify-content: center;
-    width: 100%;
-    order: 1
-  }
-
-  @media (min-width: $portrait-width) and (max-width:  $sm-desktop-width-only) {
-
-    display: none;
-  }
+  display: none;
+  order: 1;
 
   @media (min-width: $sm-desktop-width) {
 
-    display: flex;
+    display: block;
   }
 }
 
@@ -22,8 +13,8 @@
 
   @media (min-width: $tablet-width) {
 
-    width: 370px;
-    height: 354px;
+    width: 100%;
+    height: auto;
     margin-bottom: 0;
     object-fit: contain;
   }

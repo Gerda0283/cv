@@ -2,28 +2,25 @@
 .portfolio-card {
 
   display: flex;
-  width: auto;
-  height: auto;
-  margin: 40px auto;
-  padding-bottom: 30px;
+  justify-content: flex-end;
+  gap: 20px;
   flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
 
   &:nth-child(even) {
 
     .portfolio-card__frame {
 
-      @media (min-width: $mid-tablet-width) {
+      @media (min-width: $sm-tablet-width) {
 
         order: 1;
-        justify-self: flex-start;
       }
     }
 
     .portfolio-card__info {
 
-      @media (min-width: $mid-tablet-width) {
+      @media (min-width: $sm-tablet-width) {
 
         order: 2;
       }
@@ -34,7 +31,7 @@
 
     .portfolio-card__frame {
 
-      @media (min-width: $mid-tablet-width) {
+      @media (min-width: $sm-tablet-width) {
 
         order: 2;
         justify-self: flex-end;
@@ -43,7 +40,7 @@
 
     .portfolio-card__info {
 
-      @media (min-width: $mid-tablet-width) {
+      @media (min-width: $sm-tablet-width) {
 
         order: 1;
       }
@@ -56,70 +53,32 @@
     transition: all ease-in-out 0.75s;
   }
 
-  @media (min-width: $mid-tablet-width) {
+  @media (min-width: $sm-tablet-width) {
 
-    height: 400px;
+    width: calc(100%/2.2 - 20px/2.2);
+  }
+
+  @media (min-width: $sm-desktop-over-width) {
+
+    justify-content: space-between;
     flex-direction: row;
-    justify-content: flex-start;
-    column-gap: 50px;
-    margin: 50px auto;
-    padding-bottom: 0;
-  }
-
-  @media (min-width: $xs-desktop-width) {
-
-    height: 500px;
-  }
-
-  @media (min-width: $sm-desktop-width) {
-
-    height: 300px;
+    width: 100%;
   }
 }
 
-.portfolio-card__img {
+.portfolio-card__frame {
 
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  filter: grayscale(100%);
+  width: 100%;
 
-  @media (min-width: $mid-tablet-width) {
-    width: 400px;
-    height: 400px;
+  @media (min-width: $sm-desktop-over-width) {
+
+    width: calc(100%/2 - 20px/2);
   }
 
-  @media (min-width: $xs-desktop-width) {
+  img {
 
-    width: 500px;
-    height: 500px;
+    @media (min-width: $sm-tablet-width) {
+      min-height: 100%;
+    }
   }
-
-  @media (min-width: $sm-desktop-width) {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-.portfolio-card__info {
-
-  width: auto;
-  height: auto;
-  //background-color: $basic-white;
-
-  @media (min-width: $mid-tablet-width) {
-
-  width: 200px;
-  }
-
-  @media (min-width: $sm-desktop-width) {
-
-    width: 250px;
-  }
-}
-
-.portfolio-card:hover .portfolio-card__img {
-
-  filter: grayscale(0%);
-  transition: all ease-in-out 1.25s;
 }

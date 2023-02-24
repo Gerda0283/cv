@@ -6,6 +6,12 @@
   font-weight: 700;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: center;
+
+  @media (min-width: $sm-tablet-width) {
+
+    text-align: left;
+  }
 }
 
 
@@ -38,7 +44,7 @@
   @media (min-width: $desktop-width) {
 
     font-size: 22px;
-    line-height: 27px;
+    line-height: 2;
   }
 }
 
@@ -75,18 +81,60 @@
 
 .headline--bio {
 
+  position: relative;
   color: $basic-white;
   column-span: all;
+  z-index: 1;
 
   &:first-of-type {
 
     margin-top: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $sm-tablet-width) {
 
-    font-size: 22px;
-    line-height: 27px;
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 5px;
+      left: 0;
+      width: calc(100%/3.7);
+      height: 30px;
+      background-color: $basic-mint;
+      z-index: -1;
+    }
+
+    &::after {
+
+      position: absolute;
+      display: block;
+      content: "";
+      top: 49%;
+      right: 0;
+      height: 1px;
+      width: 100%;
+      background-image: linear-gradient(to right, $basic-mint-alfa 10%, $special-light_mint 100%);
+      background-size: left top / 100%;
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
+  }
+
+  @media (min-width: $sm-desktop-width) {
+
+    &::before {
+
+      display: none;
+    }
+
+    &::after {
+
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
 
     &:first-of-type {
 
@@ -95,16 +143,62 @@
   }
 }
 
-.headline--inner {
+.part--inner-headline {
 
-  margin-top: 20px;
+  @media (min-width: $sm-desktop-width) {
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 5px;
+      left: 0;
+      width: calc(100%/3.7);
+      height: 30px;
+      background-color: $basic-mint;
+      z-index: -1;
+    }
+
+    &::after {
+
+      position: absolute;
+      display: block;
+      content: "";
+      top: 49%;
+      right: 0;
+      height: 1px;
+      width: 100%;
+      background-image: linear-gradient(to right, $basic-mint-alfa 10%, $special-light_mint 100%);
+      background-size: left top / 100%;
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
+  }
 }
 
-.headline--descript {
 
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-bottom: 5px;
+.headline--bio:first-of-type::after {
+
+  display: none;
+}
+
+.headline--inner {
+
+  b {
+
+    color: $basic-mint;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+
+
+.headline--descript {
 
   b {
 

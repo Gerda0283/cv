@@ -1,15 +1,9 @@
 
-.projects-content__item {
+.projects-content {
 
-  b {
-
-    color: $special-extra_light_mint;
-    text-transform: uppercase;
-  }
-
-  @media (min-width: $desktop-width) {
-
-    font-size: 22px;
-    line-height: 27px;
-  }
+  display: flex;
+  justify-content: space-around;
+  row-gap: 35px;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }

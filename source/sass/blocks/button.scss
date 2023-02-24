@@ -2,54 +2,74 @@
 .button {
 
   position: relative;
-  width: 200px;
-  margin-top: 17px;
-  margin-left: 30px;
-  padding: 15px 10px;
-  font-family: "Montserrat";
-  font-size: 14px;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: $basic-white;
-  background-color: $special-light_mint;
   outline: transparent;
   border: transparent;
-  border-radius: 60px;
   box-sizing: border-box;
   cursor: pointer;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
+}
 
-  &:hover {
-    background-color: $special-mint;
+.button--call-to-action {
+
+  padding: 10px 25px;
+  color: $basic-white;
+  background-color: $special-mint;
+  font-size: 0.86rem;
+  letter-spacing: 1px;
+  line-height: 2;
+  border-radius: 60px;
+  z-index: 0;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right bottom, $special-mint 0%, $special-light_mint 100%);
+    background-size: left top / 100%;
+    background-repeat: no-repeat;
+    border-radius: 60px;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    z-index: -1;
   }
 
-  &:focus {
+  &:hover::before {
 
-    background-color: $special-mint;
-  }
-
-  &:active {
-
-    background-color: $special-mint;
+    opacity: 0;
   }
 }
+
 
 .button--back-to-top {
 
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 60px;
+  width: 62px;
+  margin-left: 30px;
   padding: 18px 18px;
+  color: $basic-white;
+  background-color: $special-light_mint;
   border-radius: 50%;
-  transition: background-color .3s,
-  opacity .5s, visibility .5s;
+  transition: background-color 0.3s,
+  opacity 0.5s, visibility 0.5s;
   opacity: 0;
   z-index: 1000;
+
+  &:hover, &:focus, &:active {
+    background-color: $special-mint;
+  }
 }
 
 .show {
   opacity: 0.5;
   visibility: visible;
 }
+
