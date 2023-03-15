@@ -53,12 +53,12 @@ function gridInit() {
   }
 }
 
-  gridInit();
-  document.querySelector('[data-filter="*"]').click();
+gridInit();
 
-  window.addEventListener('load', windowLoad);
+window.addEventListener('load', windowLoad);
 
-  function windowLoad() {
-    imagesInit();
-  }
+function windowLoad() {
+  document.querySelector('[data-filter="*"]').classList.add('is-checked');
+  imagesInit();
+}
 }
